@@ -76,7 +76,7 @@ public class LinkedListYoutube {
     }
 
     // We would use tmpPointer and currentSize to remove last node
-    public int removeLast(){
+    public int removeLast() {
 //        NodeYoutube tmpPointer = head;
 //        int index = currentSize - 1;
 //        for (int i = 0; i < index - 1; i++) {

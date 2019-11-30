@@ -41,11 +41,6 @@ public class StackYoutube {
 
     }
 
-    public void show() {
-        for (int i = 0; i < size; i++) {
-            System.out.print(stack[i] + " ");
-        }
-    }
 
     public boolean isEmpty() {
         return topIndex < 0;
@@ -55,6 +50,12 @@ public class StackYoutube {
     public boolean isFull() {
         return size >= capacity;
 
+    }
+
+    public void show() {
+        for (int i = 0; i < size; i++) {
+            System.out.print(stack[i] + " ");
+        }
     }
 
     public static void main(String[] args) {
