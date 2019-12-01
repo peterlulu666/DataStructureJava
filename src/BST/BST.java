@@ -38,20 +38,23 @@ public class BST {
 
     }
 
-    private void inorderPrivare(Node node){
-        if (root != null){
-            if (node.left != null){
+    private void inorderPrivare(Node node) {
+        if (root != null) {
+            // In-order traversal
+            // Go left
+            if (node.left != null) {
                 inorderPrivare(node.left);
 
             }
+            // Process current node
             System.out.println(node.data + " ");
-            if (node.right != null){
+            // Go right
+            if (node.right != null) {
                 inorderPrivare(node.right);
 
             }
 
-        }
-        else {
+        } else {
             System.out.println("The tree is empty. ");
 
         }

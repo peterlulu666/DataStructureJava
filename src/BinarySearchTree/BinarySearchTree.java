@@ -2,16 +2,20 @@ package BinarySearchTree;
 
 public class BinarySearchTree<E> {
     public Node insert(Node<E> node, E obj) {
+        // Create root node
         if (node == null) {
             Node<E> newNode = new Node<E>(obj);
             Node rootNode = newNode;
             return rootNode;
 
         }
+        // Go left
         if (((Comparable<E>) obj).compareTo((E) node.data) < 0) {
             node.left = insert(node.left, obj);
 
-        } else if (((Comparable<E>) obj).compareTo((E) node.data) > 0) {
+        }
+        // Go right
+        else if (((Comparable<E>) obj).compareTo((E) node.data) > 0) {
             node.right = insert(node.right, obj);
 
         }
@@ -24,8 +28,12 @@ public class BinarySearchTree<E> {
             return;
 
         }
+        // In-order traversal
+        // Go left
         inorder(node.left);
+        // Process current node
         System.out.println(node.data + " ");
+        // Go right
         inorder(node.right);
 
     }
