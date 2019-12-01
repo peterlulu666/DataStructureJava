@@ -103,6 +103,72 @@ public class BST {
 
     }
 
+    public int getRootData() {
+        if (root != null) {
+            return root.data;
+
+        } else {
+            return -1000;
+
+        }
+
+    }
+
+    public void printChildren(int data) {
+        Node ptr = getNode(data);
+        if (ptr != null) {
+            System.out.println("Parent node = " + ptr.data + ". ");
+            if (ptr.left == null) {
+                System.out.println("Left child = null. ");
+
+            } else {
+                System.out.println("Left child = " + ptr.left.data + ". ");
+
+            }
+            if (ptr.right == null) {
+                System.out.println("Right child = null. ");
+
+            } else {
+                System.out.println("Right child = " + ptr.right.data + ". ");
+
+            }
+
+        } else {
+            System.out.println("Data " + data + " is not in the tree. ");
+
+        }
+    }
+
+    public void removeRootMatch() {
+        if (root != null) {
+            Node delPtr = root;
+            int rootData = root.data;
+            int smallestInRightSubtree;
+            if (root.left == null && root.right == null) {
+                root = null;
+                delPtr = null;
+
+            } else if (root.left == null && root.right != null) {
+                root = root.right;
+                delPtr.right = null;
+                delPtr = null;
+                System.out.println("The root node with data " + rootData + " was deleted. ");
+                System.out.println("The new root contains data " + root.data + ". ");
+
+            } else if (root.left != null && root.right == null) {
+                root = root.left;
+                delPtr.left = null;
+                delPtr = null;
+                System.out.println("The root node with data " + rootData + " was deleted. ");
+                System.out.println("The new root contains data " + root.data + ". ");
+
+            }
+            // Case 2 - 2 Children
+
+
+        }
+    }
+
     public static void main(String[] args) {
         int[] arr = {50, 76, 21, 4, 32, 64, 15, 52, 14, 100, 2, 3, 70, 87, 80};
         var bst = new BST();
@@ -112,6 +178,15 @@ public class BST {
 
         }
         bst.inorder();
+        System.out.println("Root node ");
+        bst.printChildren(bst.getRootData());
+        System.out.println("All node ");
+        for (int i = 0; i < arr.length; i++) {
+            bst.printChildren(arr[i]);
+
+        }
+
 
     }
+
 }
