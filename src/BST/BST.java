@@ -58,6 +58,28 @@ public class BST {
             System.out.println("The tree is empty. ");
 
         }
+
+    }
+
+    private Node getNodePrivate(int data, Node node) {
+        if (node != null) {
+            if (node.data == data) {
+                return node;
+
+            } else {
+                if (data < node.data) {
+                    return getNodePrivate(data, node.left);
+
+                } else {
+                    return getNodePrivate(data, node.right);
+
+                }
+            }
+        } else {
+            return null;
+
+        }
+
     }
 
     public Node createLeaf(int data) {
@@ -73,6 +95,11 @@ public class BST {
 
     public void inorder() {
         inorderPrivare(root);
+
+    }
+
+    public Node getNode(int data) {
+        return getNodePrivate(data, root);
 
     }
 

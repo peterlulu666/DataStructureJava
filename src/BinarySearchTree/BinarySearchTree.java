@@ -1,7 +1,7 @@
 package BinarySearchTree;
 
 public class BinarySearchTree {
-    Node root;
+    Node root = null;
 
     public BinarySearchTree() {
 
@@ -13,10 +13,10 @@ public class BinarySearchTree {
     }
 
     public Node insert(Node node, int data) {
-        if (root == null) {
+        if (this.root == null) {
             var newNode = new Node(data);
-            root = newNode;
-            node = root;
+            this.root = newNode;
+            node = this.root;
 
         } else if (data < node.data) {
             if (node.left != null) {
@@ -61,14 +61,13 @@ public class BinarySearchTree {
     }
 
     public static void main(String[] args) {
+        int[] arr = {50, 76, 21, 4, 32, 64, 15, 52, 14, 100, 2, 3, 70, 87, 80};
         Node root = null;
         var binarySearchTree = new BinarySearchTree(root);
-        root = binarySearchTree.insert(root, 1);
-        root = binarySearchTree.insert(root, 2);
-        root = binarySearchTree.insert(root, 3);
-        root = binarySearchTree.insert(root, 4);
-        root = binarySearchTree.insert(root, 5);
-        root = binarySearchTree.insert(root, 6);
+        for (int i = 0; i < arr.length; i++) {
+            root = binarySearchTree.insert(root, arr[i]);
+
+        }
         binarySearchTree.inorder(root);
 
 
