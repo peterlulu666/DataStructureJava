@@ -1,15 +1,14 @@
 package BinarySearchTree;
 
-public class Node<E> {
-    E data;
-    Node<E> left;
-    Node<E> right;
+public class Node {
+    int data;
+    Node left;
+    Node right;
 
-    public Node(E data) {
+    public Node(int data) {
         this.data = data;
         left = null;
         right = null;
 
     }
-
 }

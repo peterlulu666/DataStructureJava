@@ -1,4 +1,4 @@
-package BinarySearchTree;
+package BinarySearchTreeYoutube;
 
 public class BinaryTree<E> {
     public void inorder(Node<E> node) {
