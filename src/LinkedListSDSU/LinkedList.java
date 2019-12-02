@@ -111,7 +111,7 @@ public abstract class LinkedList<E> implements Iterable<E> {
 
     }
 
-    // We would use prevPointer and tmpPointer to remove last node
+    // We would use prevPointer and tmpPointer to remove the last node
     public E removeLast() {
         // If the linked list is empty
         if (head == null) {

@@ -4,4 +4,7 @@ public class NodeYoutube {
     int data;
     NodeYoutube next;
 
+    public NodeYoutube() {
+
+    }
 }

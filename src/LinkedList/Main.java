@@ -12,6 +12,8 @@ public class Main {
         System.out.println(linkedList.removeFirst());
         linkedList.addLast(1000);
         System.out.println(linkedList);
+        System.out.println(linkedList.contains(300));
+        System.out.println(linkedList.lookup(1000));
 
 
     }
