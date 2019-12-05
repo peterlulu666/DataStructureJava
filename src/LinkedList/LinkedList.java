@@ -240,18 +240,18 @@ public class LinkedList<E> {
     /**
      * lookup
      * @param obj
-     * @return True if the data is in the linked list, or false if the data is not in the linked list
+     * @return The address of the node
      */
-    public boolean lookup(E obj){
+    public Node<E> lookup(E obj){
         for (Node<E> tmpPointer = head; tmpPointer != null; tmpPointer = tmpPointer.next){
             if (((Comparable<E>) obj).compareTo(tmpPointer.data) == 0){
-                return true;
+                return tmpPointer;
 
             }
 
         }
 
-        return false;
+        return null;
 
     }
 
