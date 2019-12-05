@@ -2,7 +2,7 @@ package test;
 
 import java.util.Scanner;
 
-public class test {
+public class FloatingPointNumber {
     public static void main(String[] args) {
         System.out.println("Enter a floating point number ");
         Scanner scanner = new Scanner(System.in);
@@ -20,7 +20,7 @@ public class test {
             System.out.println("The number is not a floating point number. ");
 
         } catch (NumberFormatException e) {
-            System.out.println("The number is not a floating point number. ");       
+            System.out.println("The number is not a floating point number. ");
 
         }
     }
