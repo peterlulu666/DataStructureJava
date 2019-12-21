@@ -9,12 +9,12 @@ public class Main {
         linkedList.addFirst(400);
         linkedList.addFirst(500);
         linkedList.insert(600, 3);
+        System.out.println(linkedList);
         System.out.println(linkedList.removeFirst());
         linkedList.addLast(1000);
         System.out.println(linkedList);
         System.out.println(linkedList.contains(300));
         System.out.println(linkedList.lookup(1000));
-
 
     }
 }

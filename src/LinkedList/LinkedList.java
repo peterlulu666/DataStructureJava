@@ -43,6 +43,7 @@ public class LinkedList<E> {
 
         }
         Node<E> tmpPointer = head;
+        // We would move the tmpPointer pointing the last node
         while (tmpPointer.next != null) {
             tmpPointer = tmpPointer.next;
 
@@ -69,7 +70,11 @@ public class LinkedList<E> {
         Node<E> newNode = new Node<E>(obj);
         Node<E> tmpPointer = head;
         // We would move the tmpPointer to index - 1
-        for (int i = 0; i < index - 1; i++) {
+        // Let's say that we would insert data at index 2,
+        // we would move tmpPointer to index 1,
+        // we would move tmpPointer 1 time.
+        // We would move tmpPointer from index 0 to index - 1, it would take index - 1 times.
+        for (int countMove = 1; countMove <= index - 1; countMove++) {
             tmpPointer = tmpPointer.next;
 
         }
