@@ -184,6 +184,7 @@ public class LinkedList<E> {
         }
         E removedData = (tmpPointer.next).data;
         tmpPointer.next = (tmpPointer.next).next;
+//        (tmpPointer.next).next = null;
         currentSize--;
         return removedData;
 
@@ -200,6 +201,8 @@ public class LinkedList<E> {
         Node<E> prevPointer = null;
         // If the linked list is empty the while loop would be skipped
         while (tmpPointer != null) {
+            // Compare object
+            // obj.equals(tmpPointer.data)
             if (((Comparable<E>) obj).compareTo(tmpPointer.data) == 0) {
                 if (tmpPointer == head) {
                     return removeFirst();
