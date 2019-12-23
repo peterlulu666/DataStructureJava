@@ -16,8 +16,7 @@ public class LinkedList<E> {
     /**
      * addFirst
      *
-     * @param obj
-     * Does Add a new node to the first node and increment the linked list size
+     * @param obj Does Add a new node to the first node and increment the linked list size
      */
     public void addFirst(E obj) {
         Node<E> newNode = new Node<E>(obj);
@@ -30,8 +29,7 @@ public class LinkedList<E> {
     /**
      * addLast
      *
-     * @param obj
-     * Does Add a new node to the last node and increment the linked list size
+     * @param obj Does Add a new node to the last node and increment the linked list size
      */
     public void addLast(E obj) {
         Node<E> newNode = new Node<E>(obj);
@@ -58,8 +56,7 @@ public class LinkedList<E> {
      * insert
      *
      * @param obj
-     * @param index
-     * Does Insert a new node in the index and increment the linked list size
+     * @param index Does Insert a new node in the index and increment the linked list size
      */
     public void insert(E obj, int index) {
         if (index == 0) {
@@ -101,6 +98,10 @@ public class LinkedList<E> {
 
         } else {
             head = head.next;
+//            Node<E> tmpPointer = head;
+//            tmpPointer = tmpPointer.next;
+//            head = tmpPointer;
+
 
         }
         currentSize--;
@@ -182,8 +183,11 @@ public class LinkedList<E> {
             tmpPointer = tmpPointer.next;
 
         }
+        // Store the data to removedData
         E removedData = (tmpPointer.next).data;
+        // The previous node is pointing to the next node
         tmpPointer.next = (tmpPointer.next).next;
+//        // The current node is pointing to the null
 //        (tmpPointer.next).next = null;
         currentSize--;
         return removedData;
@@ -192,6 +196,7 @@ public class LinkedList<E> {
 
     /**
      * removeNode
+     *
      * @param obj
      * @return The data in the removed node
      * Does Remove the node and decrement the linked list size
@@ -228,6 +233,7 @@ public class LinkedList<E> {
 
     /**
      * contains
+     *
      * @param obj
      * @return True if the data is in the linked list, or false if the data is not in the linked list
      */
@@ -247,12 +253,13 @@ public class LinkedList<E> {
 
     /**
      * lookup
+     *
      * @param obj
      * @return The address of the node
      */
-    public Node<E> lookup(E obj){
-        for (Node<E> tmpPointer = head; tmpPointer != null; tmpPointer = tmpPointer.next){
-            if (((Comparable<E>) obj).compareTo(tmpPointer.data) == 0){
+    public Node<E> lookup(E obj) {
+        for (Node<E> tmpPointer = head; tmpPointer != null; tmpPointer = tmpPointer.next) {
+            if (((Comparable<E>) obj).compareTo(tmpPointer.data) == 0) {
                 return tmpPointer;
 
             }
@@ -262,7 +269,6 @@ public class LinkedList<E> {
         return null;
 
     }
-
 
 
     @Override
