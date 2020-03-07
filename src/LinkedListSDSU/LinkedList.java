@@ -139,6 +139,7 @@ public abstract class LinkedList<E> implements Iterable<E> {
 
     }
 
+    // Remove a node which has value equal to the input value
     public E remove(E obj) {
         Node<E> tmpPointer = head;
         Node<E> prevPointer = null;

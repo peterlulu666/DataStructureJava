@@ -59,6 +59,10 @@ public class LinkedList<E> {
      * @param index Does Insert a new node in the index and increment the linked list size
      */
     public void insert(E obj, int index) {
+        if (index < 0 || index > this.currentSize){
+            throw new IllegalArgumentException("The index should be between 0 and linked list size. ");
+
+        }
         if (index == 0) {
             addFirst(obj);
             return;
